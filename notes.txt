@@ -1,0 +1,77 @@
+Step 1: Set Up the Angular Project
+
+1. Create a new Angular project using the Angular CLI:
+
+ng new book-management-system
+
+2. Navigate to the project directory:
+
+cd book-management-system
+
+Step 2: Create a Book Model
+
+1. Create a models folder inside the src/app directory
+
+2. Inside the models folder, create a file named book.model.ts
+
+3. Define an interface for a book with the following properties:
+
+id: number
+title: string
+author: string
+
+Step 3: Create the Book Component
+
+Generate a new component named book:
+
+ng generate component book
+
+Step 4: Design the Book Form
+
+1. Inside the book.component.html, create a form with fields for the title and author.
+
+2. Use Angular's two-way data binding to bind the form fields to properties in your component's class.
+
+3. Add a button that will be used to add the book. Label it "Add Book".
+
+Step 5: Storing Books in LocalStorage
+
+Inside book.component.ts, create methods to:
+
+1) Add a book to local storage.
+
+2) Retrieve all books from local storage
+
+3) Delete a book from local storage.
+
+Hint: You can use JSON.stringify() and JSON.parse() to store and retrieve objects in local storage.
+
+Step 6: Displaying the Book List
+
+1. Below the form in book.component.html, create a table or list to display the books retrieved from local storage.
+
+2. Use the *ngFor directive to iterate over the books and display them.
+
+3. Next to each book, add a delete button to remove the book.
+
+Step 7: Implementing Add and Delete Functionality
+
+1. In the book.component.ts:
+
+- When the "Add Book" button is clicked, call the method to add the book to local storage.
+
+- Generate a unique id for each book, this will help in the deletion process.
+
+- Refresh the displayed book list after a new book is added or an existing one is deleted.
+
+2. For the delete button next to each book:
+
+- Pass the unique id of the book to be deleted.
+
+- Call the method to delete the book from local storage.
+
+- Refresh the displayed book list.
+
+Run your application using the command: ng serve
+
+Add and delete books, and make sure they're being stored and retrieved correctly from local storage.
